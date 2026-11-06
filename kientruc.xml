@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="dentist-arch" name="Architecture">
+    <mxGraphModel dx="2364" dy="1307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#666666;verticalAlign=top;spacingTop=10;fontStyle=1;fontSize=22;" value="Hệ thống Quản lý Phòng khám (Dentist App)" vertex="1">
+          <mxGeometry height="460" width="720" x="420" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=22;" value="Quản trị viên(Admin)" vertex="1">
+          <mxGeometry height="60" width="30" x="190" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_doctor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=22;" value="Bác sĩ(Doctor)" vertex="1">
+          <mxGeometry height="60" width="30" x="190" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_recept" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=22;" value="Lễ tân(Receptionist)" vertex="1">
+          <mxGeometry height="60" width="30" x="190" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;fontSize=24;" value="&lt;b&gt;Client (Giao diện)&lt;/b&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;- Next.js App Router&lt;br&gt;- React 19&lt;br&gt;- Tailwind CSS v4&lt;br&gt;- shadcn/ui&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="230" x="450" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingTop=10;fontSize=24;" value="&lt;b&gt;Server (API / Backend)&lt;/b&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left; padding: 10px;&quot;&gt;- Next.js API Routes&lt;br&gt;- JWT Authentication&lt;br&gt;- Xử lý Logic (Payroll...)&lt;br&gt;- Mongoose ODM&lt;/div&gt;" vertex="1">
+          <mxGeometry height="340" width="240" x="890" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="database" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=22;" value="&lt;b&gt;MongoDB&lt;/b&gt;&lt;br&gt;(NoSQL Database)" vertex="1">
+          <mxGeometry height="160" width="140" x="1330" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_admin" edge="1" parent="1" source="actor_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=22;" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_doctor" edge="1" parent="1" source="actor_doctor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=22;" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_recept" edge="1" parent="1" source="actor_recept" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=22;" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_front_back" edge="1" parent="1" source="frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fontSize=22;" target="backend" value="HTTP / REST API&lt;br&gt;(JSON)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_back_db" edge="1" parent="1" source="backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;fontSize=22;" target="database" value="Đọc/Ghi dữ liệu&lt;br&gt;(Mongoose)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
